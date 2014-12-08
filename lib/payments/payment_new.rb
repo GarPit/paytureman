@@ -1,6 +1,6 @@
 module Paytureman
 
-  class PaymentDescription < Struct.new(:product, :total, :template_tag, :language)
+  class PaymentDescription < Struct.new(:product, :total, :template_tag, :language, :SessionType)
 
     def to_h
       super.select { |_, v| v.present? }
